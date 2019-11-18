@@ -22,7 +22,7 @@ public class DListDriver
         final String    label   = "Start from head";
         final int       limit   = 10;
         DList           list    = new DList();
-        String[]    start   = { "2", "1", "0" };
+        String[]        start   = { "2", "1", "0" };
         for ( String str : start )
             list.addHead( new DNode( str ) );
         printList( label, list );
@@ -87,6 +87,7 @@ public class DListDriver
     {
         System.out.print(  label + " *** " );
         DNode node = list.getHead() ;
+        // why is there no declared iterator in the for loop
         for ( ; node != list ; node = node.getNext() )
             System.out.print( node.getData() + " " );
         System.out.println( "***" );
